@@ -1,0 +1,416 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(71 115 112);
+    /* background-color: rgb(48, 136, 131); */
+    /* background-color: red; */
+    /* overflow: hidden; */
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+h1{
+    /* display: inline; */
+    padding-left: 10%;
+    /* padding-bottom: 20px; */
+}
+
+
+.parent_dir {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin:0px 100px; */
+    /* margin:0px 100px; */
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:20px;
+    padding-bottom: 200px;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    /* background-color: rgb(33, 64, 63); */
+    /* background-color: rgb(48, 136, 131); */
+    /* border: 2px solid yellow; */
+
+}
+
+img {
+    height: 50px;
+    width: auto;
+}
+
+.element_div {
+    /* display: flex; */
+    flex-direction: column;
+    padding: 2px 2px 2px 2px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 0px solid rgb(95, 251, 124);
+    background-color: #9bc5c5;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    max-height: 110px;
+
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+    box-sizing: border-box;
+    /* pointer-events: none; */
+}
+
+
+.element_div:hover {
+    /* border-width: 2px; */
+    /* border-radius: 5px; */
+    /* border-color: rgb(80, 235, 227); */
+    background-color: rgba(119, 225, 225, 0.79);
+    /* border-style: solid; */
+    /* word-wrap: break-word; */
+    /* opacity: 70%; */
+}
+
+.element_link {
+    text-align: center;
+    /* color: rgb(23, 27, 27) !important; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    max-height: 100%;
+    padding: 10px 0px 0px 0px;
+    /* background-color: rgb(50, 219, 219); */
+
+    display: block;
+    cursor: pointer;
+    word-break: break-all;
+    position: relative;
+}
+
+.element_link:link {
+    text-decoration: none;
+}
+
+.element_link p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* // Addition lines for 2 line or multiline ellipsis */
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+
+    border-radius: 5px;
+    margin: 2px;
+    color: #000;
+}
+
+.element_link:hover p {
+    overflow: visible;
+    white-space: normal;
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
+
+.element_link:hover .selectbox {
+    display: block !important;
+}
+
+
+.selectbox:checked {
+    display: block !important;
+    /* background-color: aqua; */
+    /* accent-color:aqua; */
+}
+
+.dir {
+    /* background-color: rgba(238, 222, 188, 0.792); */
+}
+
+.file {
+    color: rgb(0, 0, 0);
+}
+
+/* ---checkbox--- positioning--- */
+.selectbox {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+
+/* ----------------status div------------------------ */
+
+.status{
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    max-width: 60%;
+    min-width: 20%;
+    max-height: 50%;
+    bottom: 30px;
+    /* Place the button at the bottom of the page */
+    left: 5%;
+    /* Place the button 30px from the right */
+    z-index: 1;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: rgb(71, 73, 73);
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    /* cursor: pointer; */
+    /* Add a mouse pointer on hover */
+    padding: 5px 20px;
+    /* Some padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    /* border: solid #b3c0c0 2px; */
+    font-size: 20px;
+    /* Increase font size */
+    /* opacity: 50%; */
+    box-shadow: 1px 1px 8px 4px #888888;
+    margin-left: 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    /* adding scrollbar */
+    overflow: auto;
+
+}
+
+red {
+    color: red;
+}
+green {
+    color: greenyellow;
+}
+yellow {
+    color: orange;
+}
+/* ------------- upload button ---------------------------- */
+
+#upload_btn {
+    display: block;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    min-width: 50px;
+    max-width: 120px;
+    min-height: 60px;
+    bottom: 30px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: ;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: rgb(71, 73, 73);
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: solid #b3c0c0 2px;
+    font-size: 20px;
+    /* Increase font size */
+    opacity: 50%;
+    box-shadow: 1px 1px 8px 4px #888888;
+}
+
+#upload_btn:hover {
+    color: rgb(147, 229, 235);
+    border: solid rgb(147, 229, 235) 2px;
+    opacity: 100%;
+}
+
+#upload_btn:active {
+    color: rgb(235, 226, 147);
+    border: solid rgb(235, 226, 147) 2px;
+    box-shadow: 1px 1px 8px 4px #888888;
+    transform: translateY(4px);
+}
+
+
+
+
+/* ------------- add device button to create new folder ---------------------------- */
+
+
+.add_folder {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    min-height: 90px;
+    max-height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(155, 197, 197);
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+
+
+.add_button {
+    width: 80%;
+    height: 80%;
+    background-color: rgb(196, 255, 221);
+    cursor: pointer;
+    border-radius: 10px;
+    border: 5px solid rgb(212, 212, 212);
+    font-size: 50px;
+    color: #bcbcbc;
+
+}
+
+
+/* ---- form that pops up to create new folder ------------------- */
+/* Full-width input fields */
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #9f9f9f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgb(225, 239, 239);
+}
+
+/* Set a style for all buttons */
+#submit_btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #ffedca;
+    border-color: rgb(245, 202, 123);
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 100px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: rgb(169, 234, 213);
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 300px;
+    /* height: 300px; */
+    /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+.container {
+    padding: 16px;
+    /* width: 400px; */
+    /* border-radius: 10px; */
+    /* border: 10px solid; */
+    position: relative;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}

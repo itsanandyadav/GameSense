@@ -1,0 +1,267 @@
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 5%; */
+  }
+
+  .form_section {
+    background-color: white;
+    width: 400px;
+    box-sizing: border-box;
+    margin: 13px;
+    margin-bottom: 0;
+    font-size: 13px;
+    padding: 10px 10px 20px 30px;
+    border-radius: 10px;
+  }
+
+  .poll_info {
+    border-top: 12px solid #663ab5;
+    border-radius: 10px;
+    margin: 13px;
+    margin-bottom: 0;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 13px;
+    /* height: 200px; */
+    position: relative;
+  }
+
+.left_span{
+    position: relative;
+    /* left:0px; */
+}
+
+.right_span{
+    position: absolute;
+    right:10px;
+}
+
+
+.short_answer{
+    border-top: 5px solid #40b53a;
+  }
+
+  .mcq{
+    border-top: 5px solid #40b53a;
+  }
+
+
+
+  .checkbox{
+    background-color: white;
+    box-sizing: border-box;
+    height: 150px;
+    width: 500px;
+    margin: 13px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+  .sh-ans{
+    background-color: white;
+    box-sizing: border-box;
+    height: 150px;
+    width: 500px;
+    margin: 13px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+  .para{
+    background-color: white;
+    box-sizing: border-box;
+    height: 150px;
+    width: 500px;
+    margin: 13px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+  .drdo{
+    background-color: white;
+    box-sizing: border-box;
+    height: 150px;
+    width: 500px;
+    margin: 13px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+  .fileup{
+    background-color: white;
+    box-sizing: border-box;
+    height: 150px;
+    width: 500px;
+    margin: 13px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+  .linear{
+    background-color: white;
+    box-sizing: border-box;
+    height: 150px;
+    width: 500px;
+    margin: 13px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+  .mcg{
+    background-color: white;
+    box-sizing: border-box;
+    height: 290px;
+    width: 500px;
+    margin: 13px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    border-radius: 10px;
+}
+
+
+   .tcg{
+    background-color: white;
+    box-sizing: border-box;
+    height: 290px;
+    width: 500px;
+    margin: 13px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    border-radius: 10px;
+   }
+  input[type="text"],
+  [type="email"] {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 90%;
+    padding: 5px;
+  }
+ 
+   /* button {
+    margin: 13px;
+    margin-bottom: 0;
+    align-self: flex-start;
+    position: relative;
+    left: 92px;
+    padding: 8px 19px;
+    border-radius: 3px;
+    background-color: #663ab5;
+    border: none;
+    color: white;
+  }  */
+
+  .submit_div{
+    background-color: transparent;
+    position: relative;
+    height: 150px;
+}
+
+  .submit_button {
+    margin: 13px;
+    margin-left: 0;
+    margin-bottom: 0;
+
+    border-radius: 3px;
+    background-color: #663ab5;
+    color: white;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+
+    position: absolute;
+    left: 20px;
+  }
+
+  .clearFormButton{
+    cursor: pointer; 
+    color: purple; 
+    text-decoration: underline; 
+    position: absolute;
+    right: 20px;
+    font-size:16px;
+  }
+
+
+  button:hover {
+    background-color: #452286;
+    transition: ease-in 200ms;
+  }
+
+  .form_section.disclaimer{
+    background-color: transparent;
+  }
+
+  .rule {
+    /* width: 50vw; */
+    margin-top: 15px;
+    font-size: 13px;
+    color: rgb(78, 77, 77);
+  }
+
+  .policy {
+    font-size: 14px;
+    color: rgb(78, 77, 77);
+  }
+  .policy a {
+    text-decoration: none;
+    color: rgb(78, 77, 77);
+    text-decoration: underline;
+  }
+  img {
+    margin-top: 13px;
+    /* height: 200px; */
+    width: 50vw;
+    object-fit: fill;
+    object-position: center;
+    border-radius: 10px;
+  }
+
+  .Google {
+    text-align: center;
+  }
+  @media only screen and (max-width: 1000px){
+    img, .main, .name, .email,.submit, .rule, .policy, .Google {
+      width: 90vw;
+    }
+    img {
+      height: 125px;
+    }
+    .main {
+      height: 180px;
+      font-size: 12px;
+    }
+    .name, .email {
+      height: 110px;
+      font-size: 12px;
+    }
+
+    .main h1 {
+      font-size: 18px;
+    }
+    .main p,h4 {
+      margin: 10px 0px;
+    }
+    h1 {
+      font-size: 25px;
+    }
+    input[type="text"],
+    [type="email"] {
+      padding: 5;
+    }
+
+    button {
+      padding: 10px 22px;
+      border-radius: 5px;
+    }
+  }

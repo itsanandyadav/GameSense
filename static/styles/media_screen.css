@@ -1,0 +1,22 @@
+@media screen and (max-width: 500px) {
+    .parent_dir {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .header-left,
+    .header-center {
+        display: none;
+    }
+
+    #upload_btn {
+        min-width: 50px;
+        max-width: 120px;
+        min-height: 60px;
+    }
+
+    .p_pbar{
+        width: 90%;
+        background-color: #757575;
+    }
+}

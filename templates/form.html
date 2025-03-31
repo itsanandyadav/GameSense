@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Today's Poll</title>
+
+  <!-- <link rel="stylesheet" href="form.css"> -->
+  <!-- <link rel="stylesheet" href="container.css"> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/form.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/container.css') }}">
+
+</head>
+
+
+<body>
+
+  <form class="form_parent" action="/poll_form_response" id="main_form" method="post">
+    <!-- <form action="{{ url_for('poll_form_response') }}" id="main_form" method="post"> -->
+
+    
+    <div class="form_section poll_info">
+      <hr>
+      <div>
+        <span class="left_span" style="font-size: 25px; font-weight: bold;">Today's Poll</span>
+        <span class="right_span" style="font-size: 16px;color: red;">* Indicates required question</span>
+      </div>
+      <p id="about_poll" style="font-size: 16px;color: rgb(145, 18, 213);">Match 68 of 104 : KKR vs RCB</p>
+      <hr>
+    </div>
+
+
+    <div class="questions" id="div_questions">
+      <!-- User info entry -->
+      <div class="form_section short_answer">
+        <h3>Enter Aid <span style="color: red;">*</span></h3>
+        <input type="text" name="Aid" placeholder="Your Answer" id="" required>
+      </div>
+
+
+
+      
+    </div>
+
+    <!-- for submit button -->
+    <div class="form_section submit_div">
+      <button class="submit_button" id="submit_button" type="submit">Submit</button>
+      <span class="clearFormButton" id="clearFormButton">Clear Form</span>
+    </div>
+
+    <!-- form disclaimer -->
+    <div class="form_section disclaimer">
+      <h1 class="MDBU" style="color: rgb(86, 85, 85); font-weight: 550; width: 50vw;">MDBU Form
+      </h1>
+      <p class="rule">Never submit passwords through MDBU Forms</p>
+      <p class="policy">
+        This content is created TI employee and for TI inside only.Do not share outside.
+        <a href="#">Report Abuse.</a> <a href="#">Terms of condition.</a>
+        <a href="#">Privacy Policy.</a>
+      </p>
+    </div>
+  </form>
+
+
+
+  <!-- about -->
+  <div style="position:fixed;bottom:0px;right:10px;cursor: pointer;">
+    <h2 id="developer_info">&#x24D8;</h2>
+  </div>
+
+  <script type="text/javascript">
+    var server2client_data = JSON.parse('{{ server2client_data | tojson | safe }}')
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{{url_for('static', filename='scripts/questions.js')}}"></script>
+  <script src="{{url_for('static', filename='scripts/mcq.js')}}"></script>
+
+</body>
+
+</html>

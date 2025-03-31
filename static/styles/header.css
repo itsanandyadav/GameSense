@@ -1,0 +1,317 @@
+/* this part is to make the header sticky to top*/
+/* body overfow might need to set hidden */
+#top_header {
+    /* display: flex; */
+    display: block;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    min-height: 70px;
+    background-color: #609794;
+    border-width: 0px 0px 2px 0px;
+    border-color: black;
+    border-style: solid;
+    z-index: 1;
+    float: none;
+}
+
+#top_header {
+    /* background-color: #f1f1f1; */
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+}
+
+.header {
+    color: black;
+    text-align: center;
+    /* padding: 12px; */
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    /* border: 2px solid; */
+}
+
+.header-left:hover,
+.header-center:hover,
+.header-logo:hover {
+    background-color: aquamarine;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header .logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
+/* Style the active/current link*/
+.header .logo:active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Float the link section to the right */
+.header .header-left {
+    /* margin: 10px; */
+    padding: 10px;
+    float: left;
+}
+
+.header .header-logo {
+    /* margin: 10px; */
+    padding: 10px;
+    float: left;
+}
+
+/* Float the link section to the right */
+.header .header-center {
+    /* margin: 10px; */
+    padding: 10px;
+    float: left;
+}
+
+/* Float the link section to the right */
+.header .header-right {
+    float: right;
+    border: none;
+}
+
+@media screen and (max-width: 500px) {
+    .parent_dir {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .header-left,
+    .header-center {
+        display: none;
+    }
+}
+
+
+/*--------menu part ----------*/
+
+/* this conatains button and drop down contents */
+.dropdown {
+    /* float: right; */
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #2d7472;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width:75px ;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #77e2d0;
+    color: black;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #77e2d0;
+    min-width: 150px;
+    overflow: show;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    z-index: 1;
+    margin-top: 5px;
+    border-radius: 5px;
+    /* float: none; */
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    float: none;
+    text-align: right;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 2px #77e2d0; ;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #a4fff0;
+    border: solid 2px #a4fff0; ;
+
+}
+
+.dropdown-content a:active {
+    border: solid 2px #e8e89a; ;
+    color: #FF5722;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+
+
+
+/* ----status box---- */
+
+.p_pbar {
+    width: 500px;
+    background-color: #757575;
+}
+
+.pbar {
+    height: 2px;
+    width: 1%;
+    background-color: rgb(54, 190, 145);
+}
+
+.message {
+    padding: 2px;
+    margin: 2px;
+}
+
+
+/* =========round progress bar=========== */
+
+.round_pbar {
+    margin: 10px;
+    display: flex;
+    width: 100px;
+    max-height: 110px;
+    padding: 5px 5px 0px 5px;
+    /* border-radius: 8px; */
+    /* background: #fff; */
+    /* row-gap: 30px; */
+    background-color: rgb(155, 197, 197);
+    flex-direction: column;
+    align-items: center;
+    word-break: break-all;
+}
+
+.round_pbar{
+    /* background-image: url("unknown.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-size: 100px 100px; */
+    /* opacity: 50%; */
+}
+
+.round_pbar p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    border-radius: 5px;
+    margin: 2px;
+    color: #000;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.circular-progress {
+    position: relative;
+    height:60px;
+    width: 60px;
+    border-radius: 50%;
+    background: conic-gradient(#08d012 3.6deg, #addf88 0deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: rgb(155, 197, 197);
+    /* opacity: 0; */
+}
+
+.round_pbar .progress-value {
+    position: relative;
+    font-size: 14px;
+    color: #000000;
+}
+
+.round_pbar .file-size {
+    position: relative;
+    font-size: 10px;
+    color: #000000;
+}
+
+.text {
+    /* font-size: 30px; */
+    /* font-weight: 500; */
+    color: #606060;
+}
+
+
+
+/* =======mouse drag select============ */
+
+
+.ghost-select{
+    display:none;
+    z-index:100;
+    position:absolute !important;
+    cursor:default !important;
+  }
+
+  .ghost-select>div{
+    position:absolute;
+    left:0px !important;
+    top:2px !important;
+  }
+
+  .ghost-active{
+    display:block !important;
+  }
+  
+  .ghost-select>span{
+    background-color:rgba(241, 255, 149, 0.245);
+    border:1px solid #ff922d;
+    width:100%;
+    height:100%;
+    float:left;
+    border-radius: 2px;
+    /* float:right; */
+    /* float:center; */
+    
+  }
+  
+  /* #grid{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: rgba(239, 28, 190, 0.245);
+  } */
+

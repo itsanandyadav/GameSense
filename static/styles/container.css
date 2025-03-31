@@ -1,0 +1,31 @@
+
+
+.scale-container {
+    text-align: center;
+
+    margin: 20px;
+}
+.scale-label {
+    display: inline-block;
+    width: 20px;
+}
+.scale-radio {
+    margin: 5px;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    
+  }

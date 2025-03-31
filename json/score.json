@@ -1,0 +1,72 @@
+{
+    "a0485645": {
+        "username": "Hrivu",
+        "max_points": 20,
+        "points": 14,
+        "accuracy": 60,
+        "day1": {
+            "points": 3,
+            "responses": [
+                "q",
+                "abc",
+                "23"
+            ]
+        }
+    },
+    "a0485646": {
+        "username": "Apoorva",
+        "max_points": 20,
+        "points": 10,
+        "accuracy": 60,
+        "day1": {
+            "points": 3,
+            "responses": [
+                "q",
+                "abc",
+                "23"
+            ]
+        }
+    },
+    "a0485647": {
+        "username": "Jagamohan jenna",
+        "max_points": 20,
+        "points": 9,
+        "accuracy": 60,
+        "day1": {
+            "points": 3,
+            "responses": [
+                "q",
+                "abc",
+                "23"
+            ]
+        }
+    },
+    "a0485648": {
+        "username": "Pranav",
+        "max_points": 20,
+        "points": 16,
+        "accuracy": 60,
+        "day1": {
+            "points": 3,
+            "responses": [
+                "q",
+                "abc",
+                "23"
+            ]
+        }
+    },
+    "a0485649": {
+        "username": "Rajashekhar jangam mohan reddy",
+        "max_points": 20,
+        "points": 6,
+        "accuracy": 60,
+        "day1": {
+            "points": 3,
+            "responses": [
+                "q",
+                "abc",
+                "23"
+            ]
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "about_poll": "Match 69 of 104 : KKR vs RCB",
+    "question1": {
+        "sr": 1,
+        "type":"dropdown",
+        "question": "What is your favourite team?",
+        "nu_options": 4,
+        "options": [
+            "Red",
+            "green",
+            "yellow",
+            "blue"
+        ],
+        "imp": "*"
+    },
+    "question2": {
+        "sr": 2,
+        "type":"mcq",
+        "question": "What is your favourite team?",
+        "nu_options": 4,
+        "options": [
+            "Red",
+            "green",
+            "yellow",
+            "blue"
+        ],
+        "imp": "*"
+    },
+    "question3": {
+        "sr": 3,
+        "type":"dropdown",
+        "question": "What is your favourite team?",
+        "nu_options": 4,
+        "options": [
+            "Red",
+            "green",
+            "yellow",
+            "blue"
+        ],
+        "imp": "*"
+    },
+    "question4": {
+        "sr": 4,
+        "type":"mcq",
+        "question": "What is your favourite team?",
+        "nu_options": 4,
+        "options": [
+            "Red",
+            "green",
+            "yellow",
+            "blue"
+        ],
+        "imp": "*"
+    }
+}
