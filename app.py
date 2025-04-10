@@ -146,8 +146,9 @@ def poll_form():
     # return render_template("form_submitted.html", server2client_data=all_questions)
 
 
-@app.route("/poll_form_response", methods=["POST","GET"])
-def poll_form_response():
+
+@app.route("/leaderboard/search_poll_response", methods=["POST","GET"])
+def search_poll_response():
     if request.method == "POST":
         all_args = {}
 
@@ -155,6 +156,41 @@ def poll_form_response():
             all_args[key] = request.form[key]
         run.log(all_args)
     return render_template("form_submitted.html")
+
+
+@app.route("/leaderboard/save_poll_response", methods=["POST","GET"])
+def save_poll_response():
+    global leaderboard_json_file 
+    if request.method == "POST":
+        poll_response = request.get_json()
+        
+        aid = poll_response["aid"]
+                ##----------RISK----------------------------------------------
+        tc_status_file = proj_path + "/json/" + device + "_tc_status.json"
+        try:
+            with open(leaderboard_json_file, "r") as database_file:
+                database_dict = json.load(database_file)
+
+            with open(tc_status_file, "r") as status_file:
+                global_tc_status_dict[device] = json.load(status_file)
+                run.log(
+                    device,
+                    ": reading json file and setting in value for the device : ",
+                    tc_status_file,
+                )
+        except Exception as e:
+            handle_ex(e)
+            run.log("Setting value of ", device, " key as blank dictionary {}")
+
+        with open(leaderboard_json_file, "w") as outfile:
+            json.dump(global_tc_status_dict[device], outfile, indent=4)
+    else:
+        run.log("There is no post methond for /leaderboard/save_poll_response")
+    pass
+
+
+    return render_template("form_submitted.html")
+
 
 
 ## os name is "nt" for windows environment. For deveolpment and debug

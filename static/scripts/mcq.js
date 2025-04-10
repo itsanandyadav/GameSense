@@ -86,7 +86,7 @@ function create_poll(poll_info) {
 
     var parent_element = document.getElementById('div_questions');
     for (var question_info in poll_info) {
-        console.log(question_info)
+        // console.log(question_info)
         if (question_info.includes("question")) {
 
             if (poll_info[question_info]["type"] == "mcq") {
